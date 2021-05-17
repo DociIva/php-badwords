@@ -24,6 +24,13 @@
     <h1>Benvenuto</h1>
     <p>Welcome is text normal <?php echo $text; ?> and <?php echo $length; ?></p>
    </header>
-    
+
+    <?php
+     $badword_text = $_GET['badword'];
+    ?>
+
+    <!--Passaggio di dati con metodo GET -->
+    <h3>Ciao <?php echo $badword_text; ?></h3>
+     
 </body>
 </html>

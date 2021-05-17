@@ -18,10 +18,11 @@
     <!--INTRO PHP-->
     <?php 
     $text = 'Ciao come va';
+    $length = strlen($text);
     ?>
    <header>
     <h1>Benvenuto</h1>
-    <h3>Welcome <?php echo $text ?></h3>
+    <p>Welcome is text normal <?php echo $text; ?> and <?php echo $length; ?></p>
    </header>
     
 </body>

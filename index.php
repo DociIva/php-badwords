@@ -17,20 +17,32 @@
     Stampare a schermo il paragrafo con il testo censurato.-->
     <!--INTRO PHP-->
     <?php 
-    $text = 'Ciao come va';
+    $text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, 
+    eveniet sint quis similique repellat vel debitis rem veniam nostrum perspiciatis corporis perferendis architecto, 
+    expedita aut illo. Magni vitae doloremque magnam.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Debitis dolorem nesciunt inventore autem iusto ipsam repellendus error pariatur assumenda in fuga, repellat, necessitatibus labore ad cum, quod architecto sint. Maxime.' ;
     $length = strlen($text);
     ?>
    <header>
     <h1>Benvenuto</h1>
-    <p>Welcome is text normal <?php echo $text; ?> and <?php echo $length; ?></p>
+    <p>Is normal text <?php echo $text; ?> la lunghezza <?php echo $length; ?></p>
    </header>
 
     <?php
      $badword_text = $_GET['badword'];
+     //CAMBIO della parola con str_replace
+     $replace = str_replace($badword_text, '***', $text);
     ?>
 
     <!--Passaggio di dati con metodo GET -->
     <h3>Ciao <?php echo $badword_text; ?></h3>
+    <!---stampa text censurato-->
+    <p><?php echo$replace; ?></p>
+
+    
+    
+    
      
 </body>
 </html>
